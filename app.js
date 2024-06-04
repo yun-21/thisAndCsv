@@ -3,6 +3,8 @@ const fs = require('fs');
 const a = fs.readFileSync('./basicData.csv', "utf-8")
 
 const b = a.split('\r\n')
+const array = [];
 for(let key in b){
-  console.log(b[key].split(',')[0])
+  array.push(b[key].split(','))
 }
+console.log(array);
