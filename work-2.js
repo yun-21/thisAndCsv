@@ -19,9 +19,14 @@ class WorkTwo{
       throw new Error("b는 숫자만 입력할 수 있습니다.")
     }
   }
+
+  //그냥 함수가 아니라 메서드를 만드는 것이다.
+  add(){
+    return this._a+this._b;
+  }
 }
 
 let test = new WorkTwo(1,2);
 console.log(test);
 console.dir(test);
-console.log(test._a+test._b);
+console.log(test.add());
